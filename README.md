@@ -42,7 +42,7 @@ Acceptance Criteria - Create a well-managed dashboard to display the health of e
 
 ## Instructions to run application
 - Installation Requirements: Node JS, DynamoDB/NoSQL Workbench.
-- First, set up the local dynamoDB instance. ![You can follow Amazon's documentation here.](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html) Configure AWS credentials, open NoSQL Workbench and import the Capstone24.json as the database schema which is found in the DyanmoDB directory. There are additional instructions in the DynamoDB directory to set up and populate the database using the python script (XLSXtoDB.py) to populate the excel data into your local database.
+- First, set up the local dynamoDB instance. [You can follow Amazon's documentation here.](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html) Configure AWS credentials, open NoSQL Workbench and import the Capstone24.json as the database schema which is found in the DyanmoDB directory. There are additional instructions in the DynamoDB directory to set up and populate the database using the python script (XLSXtoDB.py) to populate the excel data into your local database.
 - Once your local DynamoDB instance is running, navigate to the *ui* directory and run an npm install, and in a separate terminal, do the same for the *backend* directory.
 - Run *npm start* on the *backend* directory first, and then *npm start* on the *ui* directory (separate terminals).
 - If everything was done correctly, the application should appear in your default browser.
