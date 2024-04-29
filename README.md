@@ -39,6 +39,11 @@ Acceptance Criteria - Create a well-managed dashboard to display the health of e
 - *Adnan Dhanaliwala* - *Computer Science* - Student Team Member
 - *Hassan Othman* - *Computer Science* - Student Team Member
 
+## Prototype
+
+[FIGMA - Prototype V1](https://www.figma.com/proto/iSlqnrrLy5ki1eWW7l8ir9/FINAL-MOCK-UP---Health-Dashboard?node-id=2-7&starting-point-node-id=2%3A7&mode=design&t=2FGDSO9tEwu6b4GM-1)
+
+[FIGMA - Prototype V2](https://www.figma.com/proto/iSlqnrrLy5ki1eWW7l8ir9/FINAL-MOCK-UP---Health-Dashboard?type=design&node-id=66-65&t=vZcjAiQKd7RsG63K-1&scaling=min-zoom&page-id=66%3A64&mode=design)
 
 ## Instructions to run application
 - Installation Requirements: Node JS, DynamoDB/NoSQL Workbench.
