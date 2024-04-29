@@ -30,13 +30,6 @@ Acceptance Criteria - Create a well-managed dashboard to display the health of e
 
 5. List of exceptions for each application (Open/ approved/pending/expiring soon)
 
-| Folder | Description |
-|---|---|
-| Documentation |  all documentation the project team has created to describe the architecture, design, installation and configuratin of the peoject |
-| Notes and Research | Relavent information useful to understand the tools and techniques used in the project |
-| Status Reports | Project management documentation - weekly reports, milestones, etc. |
-| src | Source code - create as many subdirectories as needed |
-
 ## Project Team
 - *Jit Ray*  - *Capital One* - Mentor/Technical Advisor
 - *Satinder Gill* - *Biomedical Engineering* - Faculty Advisor Fall 2023
