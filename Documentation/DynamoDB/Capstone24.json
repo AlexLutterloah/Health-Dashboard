@@ -1,0 +1,660 @@
+{
+  "ModelName": "Capstone24",
+  "ModelMetadata": {
+    "Author": "",
+    "DateCreated": "Jan 30, 2024, 08:46 PM",
+    "DateLastModified": "Apr 21, 2024, 08:36 PM",
+    "Description": "",
+    "AWSService": "Amazon DynamoDB",
+    "Version": "3.0"
+  },
+  "DataModel": [
+    {
+      "TableName": "Application",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "application_id",
+          "AttributeType": "N"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "asv_id",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "employee_id",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "application_name",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "description",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "created_date",
+          "AttributeType": "S"
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "SampleDataFormats": {
+        "application_id": [
+          "Int"
+        ],
+        "asv_id": [
+          "Int"
+        ],
+        "employee_id": [
+          "Int"
+        ],
+        "application_name": [
+          "dataTypes",
+          "String"
+        ],
+        "description": [
+          "dataTypes",
+          "String"
+        ],
+        "created_date": [
+          "date",
+          "ISO 8601 date and time"
+        ]
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    },
+    {
+      "TableName": "ASV",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "asv_id",
+          "AttributeType": "N"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "employee_id",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "asv_name",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "description",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "created_date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "risk",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "status",
+          "AttributeType": "S"
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "SampleDataFormats": {
+        "asv_id": [
+          "Int"
+        ],
+        "employee_id": [
+          "Int"
+        ],
+        "asv_name": [
+          "dataTypes",
+          "String"
+        ],
+        "description": [
+          "dataTypes",
+          "String"
+        ],
+        "created_date": [
+          "date",
+          "ISO 8601 date and time"
+        ],
+        "risk": [
+          "dataTypes",
+          "String"
+        ],
+        "status": [
+          "dataTypes",
+          "String"
+        ]
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    },
+    {
+      "TableName": "Incident",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "incident_id",
+          "AttributeType": "N"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "employee_id",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "priority",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "application_name",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "description",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "state",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "assignment_group",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "open_date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "close_date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "asv_id",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "predicted_state",
+          "AttributeType": "S"
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "SampleDataFormats": {
+        "incident_id": [
+          "Int"
+        ],
+        "employee_id": [
+          "Int"
+        ],
+        "priority": [
+          "Int"
+        ],
+        "application_name": [
+          "dataTypes",
+          "String"
+        ],
+        "description": [
+          "dataTypes",
+          "String"
+        ],
+        "state": [
+          "dataTypes",
+          "String"
+        ],
+        "assignment_group": [
+          "dataTypes",
+          "String"
+        ],
+        "open_date": [
+          "date",
+          "ISO 8601 date and time"
+        ],
+        "closed_date": [
+          "date",
+          "ISO 8601 date and time"
+        ],
+        "close_date": [
+          "date",
+          "ISO 8601 date and time"
+        ],
+        "asv_id": [
+          "Int"
+        ],
+        "predicted_state": [
+          "dataTypes",
+          "String"
+        ]
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    },
+    {
+      "TableName": "Owner",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "employee_id",
+          "AttributeType": "N"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "name",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "email",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "technology_division",
+          "AttributeType": "S"
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "SampleDataFormats": {
+        "employee_id": [
+          "Int"
+        ],
+        "name": [
+          "dataTypes",
+          "String"
+        ],
+        "email": [
+          "dataTypes",
+          "String"
+        ],
+        "technology_division": [
+          "dataTypes",
+          "String"
+        ]
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    },
+    {
+      "TableName": "Exception",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "exception_id",
+          "AttributeType": "N"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "employee_id",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "description",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "application_name",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "status",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "risk_score",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "open_date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "asv_id",
+          "AttributeType": "N"
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "SampleDataFormats": {
+        "exception_id": [
+          "Int"
+        ],
+        "employee_id": [
+          "Int"
+        ],
+        "description": [
+          "dataTypes",
+          "String"
+        ],
+        "application_name": [
+          "dataTypes",
+          "String"
+        ],
+        "status": [
+          "dataTypes",
+          "String"
+        ],
+        "risk_score": [
+          "Int"
+        ],
+        "open_date": [
+          "date",
+          "ISO 8601 date and time"
+        ],
+        "asv_id": [
+          "Int"
+        ]
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    },
+    {
+      "TableName": "Security",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "finding_id",
+          "AttributeType": "N"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "application_name",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "description",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "assignment_group",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "create_date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "status",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "risk_score",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "closed_date",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "asv_id",
+          "AttributeType": "N"
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "SampleDataFormats": {
+        "finding_id": [
+          "Int"
+        ],
+        "application_name": [
+          "dataTypes",
+          "String"
+        ],
+        "description": [
+          "dataTypes",
+          "String"
+        ],
+        "assignment_group": [
+          "dataTypes",
+          "String"
+        ],
+        "create_date": [
+          "date",
+          "ISO 8601 date and time"
+        ],
+        "status": [
+          "dataTypes",
+          "String"
+        ],
+        "risk": [
+          "Int"
+        ],
+        "closed_date": [
+          "date",
+          "ISO 8601 date and time"
+        ],
+        "risk_score": [
+          "Int"
+        ],
+        "asv_id": [
+          "Int"
+        ]
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    },
+    {
+      "TableName": "Users",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "firstName",
+          "AttributeType": "S"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "lastName",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "email",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "password",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "createdAt",
+          "AttributeType": "S"
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      },
+      "SampleDataFormats": {
+        "createdAt": [
+          "date",
+          "ISO 8601 date and time"
+        ]
+      },
+      "BillingMode": "PROVISIONED",
+      "ProvisionedCapacitySettings": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        },
+        "AutoScalingRead": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        },
+        "AutoScalingWrite": {
+          "ScalableTargetRequest": {
+            "MinCapacity": 1,
+            "MaxCapacity": 10,
+            "ServiceRole": "AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+          },
+          "ScalingPolicyConfiguration": {
+            "TargetValue": 70
+          }
+        }
+      }
+    }
+  ]
+}

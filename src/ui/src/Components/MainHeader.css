@@ -1,0 +1,48 @@
+.mainheader-container {
+  font-family: 'Roboto', sans-serif;
+}
+.header-container {
+  width: 1500px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main-logo {
+  width: 200px;
+  height: auto;
+}
+.user-logout {
+  text-align: right;
+  padding: 10px 0 0 0;
+}
+.logout {
+  width: 1500px;
+  display: flex;
+  margin: auto;
+  justify-content: right;
+}
+.title-bar {
+  background-color: #004879;
+  color: white;
+  padding: 20px 0 20px 0;
+}
+.title-contents {
+  display: flex;
+  justify-content: space-between;
+  width: 1500px;
+  margin: auto;
+}
+.title-bar h1 {
+  font-size: 1.5rem;
+}
+.title-bar a {
+  font-size: 1rem;
+  padding-top: 5px;
+}
+.header-title {
+  color: #004879;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 50px;
+}

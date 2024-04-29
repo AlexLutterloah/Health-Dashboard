@@ -1,0 +1,79 @@
+.loginheader-container {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 75px;
+  width: auto;
+}
+.logo-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+  }
+.logo {
+  width: 200px;
+  height: auto;
+}
+.header-title {
+  color: #004879;
+  font-weight: 900;
+  font-size: 2rem;
+}
+.login-container {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.signin-form {
+  width: 300px;
+  padding: 20px;
+  margin-bottom: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.input-group {
+  margin-bottom: 15px;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.input-group input {
+  width: 100%;
+  padding: 8px 0 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.signin-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #004879; /* Change sign-in button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.signin-btn:hover {
+  background-color: #00345c; /* Darker shade on hover */
+}
+.create-account-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #cfcfcf; /* Change create account button color */
+  color: #000; /* Change text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.create-account-btn:hover {
+  background-color: #bcbcbc; /* Darker shade on hover */
+}

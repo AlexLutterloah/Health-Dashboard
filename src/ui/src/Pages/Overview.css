@@ -1,0 +1,47 @@
+.overview-container {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 75px;
+  margin-top: 40px;
+  width: auto;
+}
+.grid-wrapper {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+  width: 1500px;
+}
+.top-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 725px);
+  grid-column-gap: 50px;
+}
+.search {
+  padding: 5px 25px 0 25px;
+}
+.grid-item {
+  border-radius: 30px;
+  background-color: white;
+}
+.top-item {
+  height: 500px;
+}
+.top-item>h2 {
+  font-size: 1.3rem;
+  padding: 15px 0 10px 30px;
+}
+.table-container {
+  min-height: 380px;
+}
+.piechart-container {
+  padding-top: 50px;
+}
+.piechart2-container {
+  display: flex;
+  justify-content: center;
+}
+.piechart3-container {
+  display: flex;
+  justify-content: center;
+}
